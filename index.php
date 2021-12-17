@@ -86,8 +86,10 @@
                         <form class="form-area" id="form_leitura" action="" method="post">  
                             <div class="col-lg-6 form-group">
                             <h3>Pesquisar patrimônio</h3>
-                                    <input type="text" class="common-input mb-20 form-control" id="usuario" name="usuario" placeholder="nome e sobrenome"
+                                    <input type="text" class="common-input mb-20 form-control " id="usuario" name="usuario" placeholder="nome e sobrenome"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'nome e sobrenome'"  required=""><br>
+
+
                                     
                                     <div class="col-lg-12">
                                         <div class="alert-msg" style="text-align: center;"></div>
@@ -121,6 +123,7 @@
 
                             ?>
                         </div>
+
                     </div>
                 </div>
             </div>	
