@@ -23,6 +23,6 @@ require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
 ?>
 <html>
     <body>
-    <a type="submit" href="/patrimonios/index.php">Voltar</a>
+    <a type="submit" href="/patrimonios/patrimonios.php">Voltar</a>
     </body>
 </html>

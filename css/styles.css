@@ -1,3 +1,14 @@
 h3{
-    text-align: center;
+    text-align: left;
+}
+
+#form_login{
+    padding-top: 100px;
+    padding-left: 100px;
+
+}
+
+#form_cad{
+    padding-top: 100px;
+    padding-left: 100px;
 }
