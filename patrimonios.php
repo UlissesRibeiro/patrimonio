@@ -24,7 +24,7 @@
 </head>
 <body>
         <!--INICIO NAVBAR-->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,6 @@
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
                 <a class="nav-link" href="pesquisa.php">Pesquisa de patrimônio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
           </div>
         </div>
       </nav>
@@ -49,7 +46,7 @@
       <!--FIM NAVBAR-->
 
     <main>
-        <!--<section class="contact-page-area section-gap">
+        <section class="contact-page-area section-gap">
             <div class="container" style="padding-top: 100px;">
                 <div class="row"></div>
                     <div class="col-lg-12">

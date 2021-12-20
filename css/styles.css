@@ -2,6 +2,11 @@ h4{ color: white;
     text-align: left;
 }
 
+#nav{
+    background-color: rgb(39, 149, 163);
+    color: white;
+}
+
 #form_login{
     padding-top: 80px;
     padding-left: 80px;

@@ -24,7 +24,7 @@
 </head>
 <body>
         <!--INICIO NAVBAR-->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
         <div class="container-fluid">
           <a class="navbar-brand" href="patrimonios.php">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,61 +39,66 @@
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
                 <a class="nav-link active" href="#">Pesquisa de patrimônio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
           </div>
         </div>
       </nav>
       
       <!--FIM NAVBAR-->
       <!-- form PESQUISA -->
-      <form class="form-area" id="form_leitura" action="" method="post">  
-                            <div class="col-lg-6 form-group">
-                            <h3>Pesquisar patrimônio</h3>
-                                    <input type="text" class="common-input mb-20 form-control " id="usuario" name="usuario" placeholder="nome e sobrenome"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'nome e sobrenome'"  required=""><br>
+      <div class="container"> 
+<form class="form-area" id="form_leitura" action="" method="post"> 
+
+    <div class="col-lg-6 form-group" style="padding-top:100px;">
+    <h3>Pesquisar patrimônio</h3>
+            <input type="text" class="common-input mb-20 form-control " id="usuario" name="usuario" placeholder="nome e sobrenome"
+            onfocus="this.placeholder = ''" onblur="this.placeholder = 'nome e sobrenome'"  required=""><br>
 
 
-                                    
-                                    <div class="col-lg-12">
-                                        <div class="alert-msg" style="text-align: center;"></div>
-                                        <button class="genric-btn primary" style="float: left;" type="submit">Pesquisar</button>											
-                                    </div>
-                                </div>
-                        </form><br><br>
-                        <div id="pesquisa" style="text-align: left;">
-                        
-                            <?php
+            
+            <div class="col-lg-12">
+                <div class="alert-msg" style="text-align: center;"></div>
+                <button class="genric-btn primary" style="float: left;" type="submit">Pesquisar</button>											
+            </div>
+        </div>
+        <div id="pesquisa" style="text-align: left;padding-top:100px;">
+    
+            <?php
 
-                            error_reporting(0);
-                            ini_set("display_errors", 0 );
-                            session_start();
-                            //require_once("cfg" . DIRECTORY_SEPARATOR . "verifica_login.php");
-                            
-                            require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
-                            
+            error_reporting(0);
+            ini_set("display_errors", 0 );
+            session_start();
+            //require_once("cfg" . DIRECTORY_SEPARATOR . "verifica_login.php");
+            
+            require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
+            
 
-                            $usuario=$_POST['usuario'];
+            $usuario=$_POST['usuario'];
 
-                            $sql = "SELECT usuario,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where usuario = '$usuario'";
+            $sql = "SELECT usuario,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where usuario = '$usuario'";
 
-                            $result = $conn->query($sql);
+            $result = $conn->query($sql);
 
-                            if ($result->num_rows > 0){
-                                while($row = $result->fetch_assoc()){
-                                    echo "Usuario:".$row["usuario"]."<br>"."Maquina:".$row["maquina"]."<br>"."Monitor 1:".$row["monitor1"]."<br>"."Monitor 2:".$row["monitor2"]."<br>".
-                                    "Teclado:".$row["teclado"]."<br>"."Mouse:".$row["mouse"]."<br>"."Estabilizador:".$row["estabilizador"]."<br>";
-                                }}else{
-                                    echo "0 Resultados";
-                                }
+            if ($result->num_rows > 0){
+                while($row = $result->fetch_assoc()){
+                    echo "Usuario:".$row["usuario"]."<br>"."Maquina:".$row["maquina"]."<br>"."Monitor 1:".$row["monitor1"]."<br>"."Monitor 2:".$row["monitor2"]."<br>".
+                    "Teclado:".$row["teclado"]."<br>"."Mouse:".$row["mouse"]."<br>"."Estabilizador:".$row["estabilizador"]."<br>";
+                }}else{
+                    echo "0 Resultados";
+                }
 
-                                
-                            $conn->close();
+                
+            $conn->close();
 
 
-                            ?>
+            ?>
 
-                        </div>
+</div>
+      </div><br>
+        
+</form>
+<br>
+<br>
 
-</body></html>
+
+  </body>
+</html>

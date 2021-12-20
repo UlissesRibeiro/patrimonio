@@ -24,7 +24,7 @@
 </head>
 <body>
         <!--INICIO NAVBAR-->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
         <div class="container-fluid">
           <a class="navbar-brand" href="patrimonios.php">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,6 @@
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
                 <a class="nav-link" href="pesquisa.php">Pesquisa de patrimônio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
           </div>
         </div>
       </nav>
@@ -49,7 +46,8 @@
       <!--FIM NAVBAR-->
 
       <!-- Form NOVO CADASTRO -->
-      <form class="form-area" id="form_contato" action="cadastro.php" method="post">  
+      <div class="container">
+      <form class="form-area" id="form_contato" action="cadastro.php" method="post" style="padding-top:100px;">  
                             <!--<img class="mb-4" src="img/cadastro.png" alt="" width="100" height="100">-->
                             <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Cadastro de Patrimônios</h1>
       
@@ -86,20 +84,14 @@
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'estabilizador'"  required=""></label><br>
 
                                 </div>
-
- 
-
-                                </div>
-                                <br>
-                                <!--<div class="col-lg-6 form-group">
-                                    
-                                </div>-->
-                                                                    
-                                <div class="col-lg-12">
+                          </div><br>
+                          <div class="col-lg-12">
                                     <div class="alert-msg" style="text-align: left;"></div>
-                                    <button class="genric-btn primary" style="float: left;" type="submit">Enviar</button>											
+                                    <button class="genric-btn primary" style="float: left;padding-top:5px;" type="submit">Enviar</button>											
                                 </div>
-                            </div>
+                          </div>
+                          
                         </form><br><br>
-
-</body></html>
+                          <!-- fim do form de cadastro -->
+</body>
+</html>

@@ -3,15 +3,15 @@ session_start();
 
 require_once("cfg" . DIRECTORY_SEPARATOR . "conectar_cadastro.php");
  
-if(empty($_POST['usuario']) || empty($_POST['senha'])) {
+if(empty($_POST['nome']) || empty($_POST['senha'])) {
 	header('Location: index.php');
 	exit();
 }
  
-$usuario = mysqli_real_escape_string($conn, $_POST['usuario']);
+$usuario = mysqli_real_escape_string($conn, $_POST['nome']);
 $senha = mysqli_real_escape_string($conn, $_POST['senha']);
  
-$query = "SELECT usuario from login where usuario = '{$usuario}' and senha = md5('{$senha}')";
+$query = "SELECT nome from login where nome = '{$usuario}' and senha = md5('{$senha}')";
 
  
 $result = mysqli_query($conn, $query);
