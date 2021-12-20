@@ -90,6 +90,7 @@
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'nome e sobrenome'"  required=""><br>
 
 
+
                                     
                                     <div class="col-lg-12">
                                         <div class="alert-msg" style="text-align: center;"></div>
