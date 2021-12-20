@@ -26,14 +26,14 @@
         <!--INICIO NAVBAR-->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Inicio</a>
+          <a class="navbar-brand" href="patrimonios.php">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="form_cadastro.php">Cadastrar patrimônio</a>
+                <a class="nav-link active" aria-current="page" href="form_cadastro.php">Cadastrar patrimônio</a>
               </li>
               <li class="nav-item">
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
@@ -48,20 +48,9 @@
       
       <!--FIM NAVBAR-->
 
-    <main>
-        <!--<section class="contact-page-area section-gap">
-            <div class="container" style="padding-top: 100px;">
-                <div class="row"></div>
-                    <div class="col-lg-12">
-                    <?php
-                    require_once("cfg" . DIRECTORY_SEPARATOR . "verifica_login.php");
-                    ?>
-                    
-                    <h2>Olá, <?php echo $_SESSION['usuario'];?></h2>
-                    <h2><a href="logout.php">Sair</a></h2>
-                        <!-- Form NOVO CADASTRO --
-                        <form class="form-area" id="form_contato" action="cadastro.php" method="post">  
-                            <!--<img class="mb-4" src="img/cadastro.png" alt="" width="100" height="100">--
+      <!-- Form NOVO CADASTRO -->
+      <form class="form-area" id="form_contato" action="cadastro.php" method="post">  
+                            <!--<img class="mb-4" src="img/cadastro.png" alt="" width="100" height="100">-->
                             <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Cadastro de Patrimônios</h1>
       
                             <div class="row">	
@@ -104,68 +93,13 @@
                                 <br>
                                 <!--<div class="col-lg-6 form-group">
                                     
-                                </div>--
+                                </div>-->
                                                                     
                                 <div class="col-lg-12">
                                     <div class="alert-msg" style="text-align: left;"></div>
                                     <button class="genric-btn primary" style="float: left;" type="submit">Enviar</button>											
                                 </div>
                             </div>
-                        </form><br><br>-->
+                        </form><br><br>
 
-                        <!-- form PESQUISA --
-                        <form class="form-area" id="form_leitura" action="" method="post">  
-                            <div class="col-lg-6 form-group">
-                            <h3>Pesquisar patrimônio</h3>
-                                    <input type="text" class="common-input mb-20 form-control " id="usuario" name="usuario" placeholder="nome e sobrenome"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'nome e sobrenome'"  required=""><br>
-
-
-                                    
-                                    <div class="col-lg-12">
-                                        <div class="alert-msg" style="text-align: center;"></div>
-                                        <button class="genric-btn primary" style="float: left;" type="submit">Pesquisar</button>											
-                                    </div>
-                                </div>
-                        </form><br><br>-->
-                        <!--<div id="pesquisa" style="text-align: left;">
-                        
-                            <?php
-
-                            //error_reporting(0);
-                            //ini_set("display_errors", 0 );
-                            //session_start();
-                            //require_once("cfg" . DIRECTORY_SEPARATOR . "verifica_login.php");
-                            
-                            /*require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
-                            
-
-                            $usuario=$_POST['usuario'];
-
-                            $sql = "SELECT usuario,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where usuario = '$usuario'";
-
-                            $result = $conn->query($sql);
-
-                            if ($result->num_rows > 0){
-                                while($row = $result->fetch_assoc()){
-                                    echo "Usuario:".$row["usuario"]."<br>"."Maquina:".$row["maquina"]."<br>"."Monitor 1:".$row["monitor1"]."<br>"."Monitor 2:".$row["monitor2"]."<br>".
-                                    "Teclado:".$row["teclado"]."<br>"."Mouse:".$row["mouse"]."<br>"."Estabilizador:".$row["estabilizador"]."<br>";
-                                }}else{
-                                    echo "0 Resultados";
-                                }
-
-                                
-                            $conn->close();*/
-
-
-                            ?>
-
-                        </div>-->
-
-                    </div>
-                </div>
-            </div>	
-        </section>
-      </main>
-</body>
-</html>
+</body></html>

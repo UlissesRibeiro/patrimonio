@@ -26,33 +26,42 @@
     </head>
 
     <body>
-        
+        <!-- bloco do php responsável pelo inicio de sessão -->
         <?php
         //error_reporting(0);
         //ini_set("display_errors", 0 );
-            session_start();
+        session_start();
         ?>
-            <?php
-                if(isset($_SESSION['nao_autenticado'])):
-                ?>
-                <div class="notification is-danger">
-                    <p>ERRO: Usuário ou senha inválidos.</p>
-                </div>
-                <?php
-                endif;
-                unset($_SESSION['nao_autenticado']);
+        <!-- bloco que retorna erro de login -->
+        <?php
+            if(isset($_SESSION['nao_autenticado'])):
             ?>
+            <div class="notification is-danger">
+                <p>ERRO: Usuário ou senha inválidos.</p>
+            </div>
+            <?php
+            endif;
+            unset($_SESSION['nao_autenticado']);
+        ?>
+    <div id="pag_login">
+        <div  id="form_login"> 
+         <!-- formulário de login --> 
+            <form action="login.php" method="post" id="">
+                <h4>Login</h4>
+                <label>Nome do usuário</label><br>
+                <input type="text" id="usuario" name="usuario" placeholder="usuario" ><br><br>
+                <label>Senha</label><br>
+                <input type="password" id="senha" name="senha"  placeholder="senha" ><br><br>
+
+                <button class="btn " style="float: left;" type="submit">Entrar</button>
             
-        <form action="login.php" method="post" id="form_login">
-        <h4>Login</h4>
-            <input type="text" id="usuario" name="usuario" placeholder="usuario" ><br><br>
-            <input type="password" id="senha" name="senha"  placeholder="senha" ><br><br>
-
-            <button class="genric-btn primary" style="float: left;" type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <br>
         
-        </form><br>
 
-        <form action="cad_login.php" method="post" id="form_cad">
+        <!--<form action="cad_login.php" method="post" id="form_cad">
         <h4>Cadastro</h4>
             <label>Nome</label><br>
             <input type="text" id="nome" name="nome"><br>
@@ -71,5 +80,5 @@
 
             <button class="genric-btn primary" style="float: left;" type="submit">Enviar</button>
 
-        </form>
+        </form>-->
     </body>
