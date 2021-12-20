@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
     //error_reporting(0);
     // ini_set(“display_errors”, 0 );
@@ -23,6 +23,6 @@ require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
 ?>
 <html>
     <body>
-    <a type="submit" href="/patrimonios/index.php">Voltar</a>
+    <a type="submit" href="/patrimonios/form_cadastro.php">Voltar</a>
     </body>
 </html>
