@@ -55,8 +55,12 @@
                                 <div class="col-lg-6 form-group">
                                     <h3>Novo Cadastro</h3>
                                     
-                                    <label>Usuário
-                                    <input type="text" class="common-input mb-20 form-control" id="nome" name="nome" placeholder="nome e sobrenome"
+                                    <label>Nome
+                                    <input type="text" class="common-input mb-20 form-control" id="nome" name="nome" placeholder="nome"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome completo'"  required=""></label>
+
+                                    <label>Sobrenome
+                                    <input type="text" class="common-input mb-20 form-control" id="nome" name="sobrenome" placeholder="sobrenome"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome completo'"  required=""></label>
                                     
                                     <label>Maquina
