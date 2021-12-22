@@ -2,14 +2,17 @@
 session_start();
 require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
 
-$atual=$_POST['nome_atual'];
-$novo=$_POST['novo_nome'];
+//$atual=$_POST['nome_atual'];
+$id=$_POST['id_user'];
+$patrimonio=$_POST['pat'];
+$nome=$_POST['novo_nome'];
+
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql = "UPDATE patrimonio SET nome='$novo' WHERE nome='$atual'";
+  $sql = "UPDATE patrimonio SET nome='$nome' WHERE id='$id'";
 
   if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";

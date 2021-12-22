@@ -78,13 +78,13 @@
             $nome=$_POST['usuario'];
             $sobrenome=$_POST['usuario'];
 
-            $sql = "SELECT nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
+            $sql = "SELECT id,nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
 
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
                 while($row = $result->fetch_assoc()){
-                    echo "Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
+                    echo "ID: ".$row['id']."<br>"."Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
                     .$row["monitor2"]."<br>"."Teclado: ".$row["teclado"]."<br>"."Mouse: ".$row["mouse"]."<br>"."Estabilizador: ".$row["estabilizador"]."<br>"."<br>";
                 }}else{
                     echo "0 Resultados";

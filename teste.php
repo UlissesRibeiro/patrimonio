@@ -52,52 +52,50 @@
     <div class="container"> 
 		<div id="consulta" style="padding-top:100px;"> 
 			<?php
-
 			session_start();
-
 			require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
 
-			echo 'Para fazer alteraçãos informe o nome do usuário para busca';
-			echo '<form method="post" action="">';
-            echo '<input type="text" name="usuario">';
+            echo '<form method="post" action="">';
+            echo '<input type="text" name="busca">';
             echo '<input type="submit" value="buscar">';
             echo '</form>';
 
-			$nome=$_POST['usuario'];
-            $sobrenome=$_POST['usuario'];
+            $busca=$_POST['busca'];
 
-            $sql = "SELECT id,nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
+			$sql = "SELECT id,nome FROM patrimonio where nome = '$busca'";
+			$result = $conn->query($sql);
 
-            $result = $conn->query($sql);
+			if ($result->num_rows > 0){
+				while($row = $result->fetch_assoc()){
+					echo "<br>"."<br>"."Nome : ".$row['nome']."<br>";
+                    echo '<br>';
+	
+				}}else{
+					echo "0 Resultados";
+				}
+                    /*echo '<form method="post" action="editar.php">';
+					echo '<p>Nome : <input type=text name="troca_nome" value='.$row["nome"].'>';
+                    $troca_nome=$_POST['troca_nome'];
+                    echo '<br>'.'<input type="submit" value="Salvar alterações">';
+                    
+                    echo '</fomr>';
+                $sql = "UPDATE patrimonio SET nome='$troca_nome' WHERE nome='$busca'";
+                    
 
-            if ($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                    echo "ID: ".$row['id']."<br>"."Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
-                    .$row["monitor2"]."<br>"."Teclado: ".$row["teclado"]."<br>"."Mouse: ".$row["mouse"]."<br>"."Estabilizador: ".$row["estabilizador"]."<br>"."<br>";
-                }}else{
-                    echo "0 Resultados";
-                }
+                if ($conn->query($sql) === TRUE) {
+                  echo "Record updated successfully";
+                } else {
+                  echo "Error updating record: " . $conn->error;
+                }*/
 
-                
-            $conn->close();
+
+			$conn->close();
 			?>
 	</div>
 	<!--<a href="editar.php">Editar</a>-->
-
 	<form id="form1" name="form1" method="post" action="editar.php" style="padding-top:50px;">
 	<!--<label>Nome atual : </label><input type="text" name="nome_atual" id="nome"><br>-->
-	<label>ID : </label><input type="text" name="id_user" id="nome"><br>
 	<label>Novo Nome : </label><input type="text" name="novo_nome" id="nome"><br>
-	
-	<!--<label>Maquina : </label><input type="text" name="maquina" id="nome"><br>
-	<label>Monitor 1 : </label><input type="text" name="monitor2" id="nome"><br>
-	<label>Monitor 2 : </label><input type="text" name="monitor2" id="nome"><br>
-	<label>Teclado : </label><input type="text" name="teclado" id="nome"><br>
-	<label>Mouse : </label><input type="text" name="mouse" id="nome"><br>
-	<label>Estabilizador : </label><input type="text" name="estabilizador" id="nome"><br>-->
-
-	
-
 		<input type="submit" onClick="return confirm('Deseja atualizar o registro?');"
 		name="Submit" value="SALVAR ALTERAÇÕES" id="button-form">
 
