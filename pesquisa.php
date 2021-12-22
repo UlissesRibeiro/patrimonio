@@ -39,6 +39,9 @@
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
                 <a class="nav-link active" href="#">Pesquisa de patrimônio</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="consulta_editar.php">Editar</a>
+              </li>
           </div>
         </div>
       </nav>
@@ -50,14 +53,14 @@
 
     <div class="col-lg-6 form-group" style="padding-top:100px;">
     <h3>Pesquisar patrimônio</h3>
-            <input type="text" class="common-input mb-20 form-control " id="usuario" name="usuario" placeholder="nome e sobrenome"
+            <input type="text" class="common-input mb-20 form-control " id="usuario" name="usuario" placeholder="nome ou sobrenome"
             onfocus="this.placeholder = ''" onblur="this.placeholder = 'nome e sobrenome'"  required=""><br>
 
 
             
             <div class="col-lg-12">
                 <div class="alert-msg" style="text-align: center;"></div>
-                <button class="genric-btn primary" style="float: left;" type="submit">Pesquisar</button>											
+                <button class="btn " style="float: left;background-color:rgb(115, 221, 235);border-color:black;color:black;" type="submit">Pesquisar</button>											
             </div>
         </div>
         <div id="pesquisa" style="text-align: left;padding-top:100px;">
@@ -72,16 +75,17 @@
             require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
             
 
-            $usuario=$_POST['usuario'];
+            $nome=$_POST['usuario'];
+            $sobrenome=$_POST['usuario'];
 
-            $sql = "SELECT nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$usuario'";
+            $sql = "SELECT nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
 
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
                 while($row = $result->fetch_assoc()){
-                    echo "Usuario:".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina:".$row["maquina"]."<br>"."Monitor 1:".$row["monitor1"]."<br>"."Monitor 2:".$row["monitor2"]."<br>".
-                    "Teclado:".$row["teclado"]."<br>"."Mouse:".$row["mouse"]."<br>"."Estabilizador:".$row["estabilizador"]."<br>"."<br>";
+                    echo "Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
+                    .$row["monitor2"]."<br>"."Teclado: ".$row["teclado"]."<br>"."Mouse: ".$row["mouse"]."<br>"."Estabilizador: ".$row["estabilizador"]."<br>"."<br>";
                 }}else{
                     echo "0 Resultados";
                 }

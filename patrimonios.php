@@ -39,6 +39,9 @@
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
                 <a class="nav-link" href="pesquisa.php">Pesquisa de patrimônio</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="consulta_editar.php">Editar</a>
+              </li>
           </div>
         </div>
       </nav>

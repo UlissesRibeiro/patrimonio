@@ -39,6 +39,9 @@
                 <!--<a class="nav-link" href="streamers.html">Streamers</a>-->
                 <a class="nav-link" href="pesquisa.php">Pesquisa de patrimônio</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="consulta_editar.php">Editar</a>
+              </li>
           </div>
         </div>
       </nav>
@@ -46,12 +49,12 @@
       <!--FIM NAVBAR-->
 
       <!-- Form NOVO CADASTRO -->
-      <div class="container">
+      <div class="container ">
       <form class="form-area" id="form_contato" action="cadastro.php" method="post" style="padding-top:100px;">  
                             <!--<img class="mb-4" src="img/cadastro.png" alt="" width="100" height="100">-->
                             <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Cadastro de Patrimônios</h1>
       
-                            <div class="row">	
+                            <div class="row d-flex justify-content-center">	
                                 <div class="col-lg-6 form-group">
                                     <h3>Novo Cadastro</h3>
                                     
@@ -85,14 +88,17 @@
 
                                     <label>Estabilizador
                                     <input type="text" class="common-input mb-20 form-control" id="estabilizador" name="estabilizador" placeholder="Estabilizador"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'estabilizador'"  required=""></label><br>
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'estabilizador'"  required=""></label><br><br>
+                                    <!-- botão enviar inicio -->
+                                    <div class="col-lg-12">
+                                      <div class="alert-msg" style="text-align: left;"></div>
+                                        <button class="btn" style="float: left;padding-top:5px;background-color:rgb(115, 221, 235);border-color:black;color:black;" type="submit">Enviar</button>											
+                                  </div>
+                                  <!-- botão enviar fim -->
 
                                 </div>
                           </div><br>
-                          <div class="col-lg-12">
-                                    <div class="alert-msg" style="text-align: left;"></div>
-                                    <button class="genric-btn primary" style="float: left;padding-top:5px;" type="submit">Enviar</button>											
-                                </div>
+
                           </div>
                           
                         </form><br><br>

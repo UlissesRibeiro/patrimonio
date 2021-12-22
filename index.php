@@ -43,8 +43,8 @@
             endif;
             unset($_SESSION['nao_autenticado']);
         ?>
-    <div id="pag_login">
-        <div  id="form_login"> 
+    <div class="d-flex justify-content-center" id="pag_login">
+        <div id="form_login"> 
          <!-- formulário de login --> 
             <form action="login.php" method="post" id="">
                 <h4>Login</h4>
@@ -53,7 +53,7 @@
                 <label>Senha</label><br>
                 <input type="password" id="senha" name="senha"  placeholder="senha" ><br><br>
 
-                <button class="btn " style="float: left;" type="submit">Entrar</button>
+                <button class="btn " style="float: left;border-color:black;color:black;" type="submit">Entrar</button>
             
             </form>
         </div>
