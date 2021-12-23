@@ -49,58 +49,61 @@
       <!--FIM NAVBAR-->
       <!-- form PESQUISA -->
 	  
-    <div class="container"> 
+      <div class="container"> 
 		<div id="consulta" style="padding-top:100px;"> 
 			<?php
-
+      error_reporting(0);
+      ini_set("display_errors", 0 );
 			session_start();
-
 			require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
+      //formulario de busca do usuario pela ID
+      echo 'Informe o ID do usuário para busca!';
+      echo '<form method="post" action="">';
+      echo '<input type="text" name="busca">';
+      echo '<input type="submit" value="buscar">';
+      echo '</form>';
+      //variavel para capturar a ID e enviar para a query
+      $buscar=$_POST['busca'];
 
-			echo 'Para fazer alteraçãos informe o nome do usuário para busca';
-			echo '<form method="post" action="">';
-            echo '<input type="text" name="usuario">';
-            echo '<input type="submit" value="buscar">';
-            echo '</form>';
+      $sql = "SELECT id,nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM 
+      patrimonio where id ='$buscar'"; //todo o select vai ser em cima da ID da variaval $bucar
 
-			$nome=$_POST['usuario'];
-            $sobrenome=$_POST['usuario'];
+      $result = $conn->query($sql);
 
-            $sql = "SELECT id,nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
+          //ciclo para exibição do select
+          while($row = $result->fetch_assoc()){
+            $id=$row['id'];
+            $nome=$row['nome'];
+            $sobrenome=$row['sobrenome'];
+            $maquina=$row['maquina'];
+            $monitor1=$row['monitor1'];
+            $monitor2=$row['monitor2'];
+            $teclado=$row['teclado'];
+            $mouse=$row['mouse'];
+            $estabilizador=$row['estabilizador'];
+          }
 
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                    echo "ID: ".$row['id']."<br>"."Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
-                    .$row["monitor2"]."<br>"."Teclado: ".$row["teclado"]."<br>"."Mouse: ".$row["mouse"]."<br>"."Estabilizador: ".$row["estabilizador"]."<br>"."<br>";
-                }}else{
-                    echo "0 Resultados";
-                }
-
-                
-            $conn->close();
+			$conn->close();
 			?>
-	</div>
-	<!--<a href="editar.php">Editar</a>-->
+      <!-- Formulário de edição / exxibição dos dados do select -->
+      <form action="editar.php" method="post">
+          <input type="hidden" name="id" id="nome" value="<?php echo $id;?>"><br>
+          <label>Nome : </label> <input type="text" name="nome" id="nome" value="<?php echo $nome;?>"><br>
+          <label>Sobrenome : </label> <input type="text" name="sobrenome" id="nome" value="<?php echo $sobrenome;?>"><br>
+          <label>Maquina : </label> <input type="text" name="maquina" id="nome" value="<?php echo $maquina;?>"><br>
+          <label>Monitor 1 : </label> <input type="text" name="monitor1" id="nome" value="<?php echo $monitor1;?>"><br>
+          <label>Monitor 2 : </label> <input type="text" name="monitor2" id="nome" value="<?php echo $monitor2;?>"><br>
+          <label>Teclado : </label> <input type="text" name="teclado" id="nome" value="<?php echo $teclado;?>"><br>
+          <label>Mouse : </label> <input type="text" name="mouse" id="nome" value="<?php echo $mouse;?>"><br>
+          <label>Estabilizador : </label> <input type="text" name="estabilizador" id="nome" value="<?php echo $estabilizador;?>"><br>
 
-	<form id="form1" name="form1" method="post" action="editar.php" style="padding-top:50px;">
-	<!--<label>Nome atual : </label><input type="text" name="nome_atual" id="nome"><br>-->
-	<label>ID : </label><input type="text" name="id_user" id="nome"><br>
-	<label>Novo Nome : </label><input type="text" name="novo_nome" id="nome"><br>
-	
-	<!--<label>Maquina : </label><input type="text" name="maquina" id="nome"><br>
-	<label>Monitor 1 : </label><input type="text" name="monitor2" id="nome"><br>
-	<label>Monitor 2 : </label><input type="text" name="monitor2" id="nome"><br>
-	<label>Teclado : </label><input type="text" name="teclado" id="nome"><br>
-	<label>Mouse : </label><input type="text" name="mouse" id="nome"><br>
-	<label>Estabilizador : </label><input type="text" name="estabilizador" id="nome"><br>-->
+          <br><input type="submit" onClick="return confirm('Deseja atualizar o registro?');"
+		      name="Submit" value="SALVAR ALTERAÇÕES" id="button-form"> <input type="reset" value="Limpar">
 
-	
-
-		<input type="submit" onClick="return confirm('Deseja atualizar o registro?');"
-		name="Submit" value="SALVAR ALTERAÇÕES" id="button-form">
+      </form>
 
 
-	</form>
+
+	</div></div></body>
+
 </html>
