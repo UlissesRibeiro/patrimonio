@@ -24,6 +24,6 @@ require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
 ?>
 <html>
     <body>
-    <a type="submit" href="/patrimonios/form_cadastro.php">Voltar</a>
+    <a type="submit" href="form_cadastro.php">Voltar</a>
     </body>
 </html>

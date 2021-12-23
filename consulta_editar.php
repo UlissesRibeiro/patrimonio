@@ -59,8 +59,11 @@
       //formulario de busca do usuario pela ID
       echo 'Informe o ID do usuário para busca!';
       echo '<form method="post" action="">';
-      echo '<input type="text" name="busca">';
-      echo '<input type="submit" value="buscar">';
+      echo '<input class="common-input mb-20 form-control"  style="width:35%;"
+      type="text" name="busca">';
+      echo '<br>';
+      echo ' <input class="btn" type="submit" value="buscar"
+      style="background-color:rgb(39, 149, 163);border-color:black;color:white;">';
       echo '</form>';
       //variavel para capturar a ID e enviar para a query
       $buscar=$_POST['busca'];
@@ -85,23 +88,30 @@
 
 			$conn->close();
 			?>
+      <div id="form_edit" class="container" style="width:35%;padding-bottom:100px;">
       <!-- Formulário de edição / exxibição dos dados do select -->
-      <form action="editar.php" method="post">
+      <form action="editar.php" method="post" >
           <input type="hidden" name="id" id="nome" value="<?php echo $id;?>"><br>
-          <label>Nome : </label> <input type="text" name="nome" id="nome" value="<?php echo $nome;?>"><br>
-          <label>Sobrenome : </label> <input type="text" name="sobrenome" id="nome" value="<?php echo $sobrenome;?>"><br>
-          <label>Maquina : </label> <input type="text" name="maquina" id="nome" value="<?php echo $maquina;?>"><br>
-          <label>Monitor 1 : </label> <input type="text" name="monitor1" id="nome" value="<?php echo $monitor1;?>"><br>
-          <label>Monitor 2 : </label> <input type="text" name="monitor2" id="nome" value="<?php echo $monitor2;?>"><br>
-          <label>Teclado : </label> <input type="text" name="teclado" id="nome" value="<?php echo $teclado;?>"><br>
-          <label>Mouse : </label> <input type="text" name="mouse" id="nome" value="<?php echo $mouse;?>"><br>
-          <label>Estabilizador : </label> <input type="text" name="estabilizador" id="nome" value="<?php echo $estabilizador;?>"><br>
+          <label>Nome : </label> <input class="common-input mb-20 form-control" type="text" name="nome" id="nome" value="<?php echo $nome;?>"><br>
+          <label>Sobrenome : </label> <input class="common-input mb-20 form-control" type="text" name="sobrenome" id="nome" value="<?php echo $sobrenome;?>"><br>
+          <label>Maquina : </label> <input class="common-input mb-20 form-control" type="text" name="maquina" id="nome" value="<?php echo $maquina;?>"><br>
+          <label>Monitor 1 : </label> <input class="common-input mb-20 form-control" type="text" name="monitor1" id="nome" value="<?php echo $monitor1;?>"><br>
+          <label>Monitor 2 : </label> <input class="common-input mb-20 form-control" type="text" name="monitor2" id="nome" value="<?php echo $monitor2;?>"><br>
+          <label>Teclado : </label> <input class="common-input mb-20 form-control" type="text" name="teclado" id="nome" value="<?php echo $teclado;?>"><br>
+          <label>Mouse : </label> <input class="common-input mb-20 form-control" type="text" name="mouse" id="nome" value="<?php echo $mouse;?>"><br>
+          <label>Estabilizador : </label> <input class="common-input mb-20 form-control" type="text" name="estabilizador" id="nome" value="<?php echo $estabilizador;?>"><br>
 
-          <br><input type="submit" onClick="return confirm('Deseja atualizar o registro?');"
-		      name="Submit" value="SALVAR ALTERAÇÕES" id="button-form"> <input type="reset" value="Limpar">
+          <br>
+          <!-- botão de confirmar o update para o editar.php -->
+          <input class="btn" type="submit" onClick="return confirm('Deseja atualizar o registro?');"
+		      name="Submit" value="Salvar" id="button-form"
+          style="background-color:darkgreen;border-color:black;color:white;">
+          <!-- botão para clenar as alterações antes de enviar -->
+          <input class="btn" type="reset" value="Limpar"
+          style="background-color:darkred;border-color:black;color:white;">
 
       </form>
-
+      </div>
 
 
 	</div></div></body>

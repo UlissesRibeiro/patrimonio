@@ -60,7 +60,7 @@
             
             <div class="col-lg-12">
                 <div class="alert-msg" style="text-align: center;"></div>
-                <button class="btn " style="float: left;background-color:rgb(115, 221, 235);border-color:black;color:black;" type="submit">Pesquisar</button>											
+                <button class="btn " style="float: left;background-color:darkgreen;border-color:black;color:white;" type="submit">Pesquisar</button>											
             </div>
         </div>
         <div id="pesquisa" style="text-align: left;padding-top:100px;">

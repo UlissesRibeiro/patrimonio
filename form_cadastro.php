@@ -92,7 +92,8 @@
                                     <!-- botão enviar inicio -->
                                     <div class="col-lg-12">
                                       <div class="alert-msg" style="text-align: left;"></div>
-                                        <button class="btn" style="float: left;padding-top:5px;background-color:rgb(115, 221, 235);border-color:black;color:black;" type="submit">Enviar</button>											
+                                        <button class="btn" style="float: left;padding-top:5px;background-color:darkgreen;
+                                        border-color:black;color:white;" type="submit">Enviar</button>											
                                   </div>
                                   <!-- botão enviar fim -->
 
