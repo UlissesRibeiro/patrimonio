@@ -33,5 +33,5 @@ if ($conn->connect_error) {
 ?>
 
 <html>
-  <a href="consulta_editar.php">voltar</a>
+  <a href="lista_users.php">voltar</a>
 </html>

@@ -22,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
         <!-- css do projeto-->
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/streamers.css">
+        
     </head>
 
     <body>
@@ -43,19 +43,23 @@
             endif;
             unset($_SESSION['nao_autenticado']);
         ?>
-    <div class="d-flex justify-content-center" id="pag_login">
-        <div id="form_login"> 
-         <!-- formulário de login --> 
-            <form action="login.php" method="post" id="">
-                <h4>Login</h4>
-                <label>Nome do usuário</label><br>
-                <input type="text" id="usuario" name="nome" placeholder="usuario" ><br><br>
-                <label>Senha</label><br>
-                <input type="password" id="senha" name="senha"  placeholder="senha" ><br><br>
+    <div class="container d-flex justify-content-center" id="pag_login">
+        <div id="form_login" class="row"> 
 
-                <button class="btn " style="float: left;border-color:black;color:black;" type="submit">Entrar</button>
+         <!-- formulário de login --> 
+            <form class="form-area col-lg-8 ms-auto" action="login.php" method="post" id="">
+                <h4>Login</h4>
+                <label><i class="bi bi-person"> Nome do usuário</i></label><br>
+                <input class="common-input mb-20 form-control w-50" type="text" id="usuario" name="nome" placeholder="usuario" ><br>
+                <label><i><img src="img/password.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Senha</i></label><br>
+                <input class="common-input mb-20 form-control w-50" type="password" id="senha" name="senha"  placeholder="senha" ><br>
+
+                <button class="btn " style="float: left;border-color:black;color:white;" type="submit"><i class="bi bi-box-arrow-in-right"> Entrar</i></button>
             
             </form>
+            <div class="col-lg-4 ms-auto" id="lupiteco" style="margin-top: -60px;">
+                <img src="img/monkey.png" style="width: 70%;">
+            </div>
         </div>
     </div>
     <br>
