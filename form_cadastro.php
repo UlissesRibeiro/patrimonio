@@ -13,7 +13,7 @@ include_once 'includes/navbar.php';
                             <div class="row d-flex ">	
                                 <div class="col-lg-12 form-group justify-content-center ">
                                     <h3><i><img src="img/edit.png" alt="Bootstrap" width="33" height="33" style="padding-bottom: 5px;"> Novo cadastro</i></h3>
-                                    
+                                    <h6 style="font-style: italic;">*Se não souber o patrimônio, estiver ilegivel ou não tiver inserir 0 (zero) apenas!</h6>
                                     <label><i><img src="img/id-card.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Nome</i>
                                     <input type="text" class="common-input mb-20 form-control" id="nome" name="nome" placeholder="nome"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome completo'"  required=""></label>
@@ -31,7 +31,7 @@ include_once 'includes/navbar.php';
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'monitor1'"  required=""></label>
 
                                     <label><i class="bi bi-display"> Monitor 2</i>
-                                    <input type="text" class="common-input mb-20 form-control" id="monitor2" name="monitor2" placeholder="se não tiver inserir 0"
+                                    <input type="text" class="common-input mb-20 form-control" id="monitor2" name="monitor2" placeholder="monitor"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'monitor2'"  required=""></label>
 
                                     <label><i class="bi bi-keyboard" > Teclado</i>

@@ -49,7 +49,7 @@
          <!-- formulário de login --> 
             <form class="form-area col-lg-8 ms-auto" action="login.php" method="post" id="">
                 <h4>Login</h4>
-                <label><i class="bi bi-person"> Nome do usuário</i></label><br>
+                <label><i class="bi bi-person"> Usuário</i></label><br>
                 <input class="common-input mb-20 form-control w-50" type="text" id="usuario" name="nome" placeholder="usuario" ><br>
                 <label><i><img src="img/password.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Senha</i></label><br>
                 <input class="common-input mb-20 form-control w-50" type="password" id="senha" name="senha"  placeholder="senha" ><br>

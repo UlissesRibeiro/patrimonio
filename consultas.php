@@ -14,6 +14,8 @@
                 <tr>
                     <th scope="col">Nome</th>
                     <th scope="col">Sobrenome</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Deletar</th>
                 </tr>
             </thead>
             <tbody>

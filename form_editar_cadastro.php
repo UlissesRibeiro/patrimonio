@@ -29,7 +29,7 @@
 include_once 'includes/navbar.php';
 
 ?>
-    <div id="form_edit" class="container" style="width:35%;padding-bottom:100px;padding-top:100px;">
+    <div id="form_edit" class="container form_edit" style="width:35%;padding-bottom:100px;padding-top:100px;">
       <!-- Formulário de edição / exxibição dos dados do select -->
       <form action="editar.php" method="post" >
           <input type="hidden" name="id" id="nome" value="<?php echo $id;?>"><br>
@@ -44,12 +44,16 @@ include_once 'includes/navbar.php';
 
           <br>
           <!-- botão de confirmar o update para o editar.php -->
-          <input class="btn" type="submit" onClick="return confirm('Deseja atualizar o registro?');"
+          <input class="btn btn-sm" type="submit" onClick="return confirm('Deseja atualizar o registro?');"
 		      name="Submit" value="Salvar" id="button-form"
           style="background-color:darkgreen;border-color:black;color:white;">
           <!-- botão para clenar as alterações antes de enviar -->
-          <input class="btn" type="reset" value="Limpar"
+          <input class="btn btn-sm" type="reset" value="Limpar"
           style="background-color:darkred;border-color:black;color:white;">
+
+          <a class="btn btn-sm" type="reset" value="Voltar"
+          style="background-color:RoyalBlue;border-color:darkgreen;color:white;" href="lista_users.php">
+          <i class="bi bi-box-arrow-left"> Voltar</i></a>
 
       </form>
       </div>

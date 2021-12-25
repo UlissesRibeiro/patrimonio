@@ -30,14 +30,56 @@ include_once 'includes/navbar.php';
                 $nome=$_POST['usuario'];
                 $sobrenome=$_POST['usuario'];
 
-                $sql = "SELECT id,nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
+                $sql = "SELECT id,nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador 
+                FROM patrimonio where nome ='$nome' or sobrenome = '$sobrenome'";
 
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
-                        echo "ID: ".$row['id']."<br>"."Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
-                        .$row["monitor2"]."<br>"."Teclado: ".$row["teclado"]."<br>"."Mouse: ".$row["mouse"]."<br>"."Estabilizador: ".$row["estabilizador"]."<br>"."<br>";
+                        /*echo "ID: ".$row['id']."<br>"."Usuario: ".$row["nome"]." ".$row["sobrenome"]."<br>"."Maquina: ".$row["maquina"]."<br>"."Monitor 1: ".$row["monitor1"]."<br>"."Monitor 2: "
+                        .$row["monitor2"]."<br>"."Teclado: ".$row["teclado"]."<br>"."Mouse: ".$row["mouse"]."<br>"."Estabilizador: ".$row["estabilizador"]."<br>"."<br>";*/
+                        $id=$row['id'];
+                        $nome=$row['nome']."<br>";
+                        $sobrenome=$row['sobrenome'];
+                        $maquina=$row['maquina'];
+                        $monitor1=$row['monitor1'];
+                        $monitor2=$row['monitor2'];
+                        $teclado=$row['teclado'];
+                        $mouse=$row['mouse'];
+                        $estabilizador=$row['estabilizador'];
+
+                        echo '</form>';
+                        echo '<table class="table" id="tabela">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo    '<th scope="col">Nome</th>';
+                        echo    '<th scope="col">Sobrenome</th>';
+                        echo    '        <th scope="col">Máquina</th>';
+                        echo    '        <th scope="col">Monitor 1</th>';
+                        echo    '        <th scope="col">Monitor 2</th>';
+                        echo    '        <th scope="col">Teclado</th>';
+                        echo    '        <th scope="col">Mouse</th>';
+                        echo    '        <th scope="col">Estabilizador</th>';
+                        echo    '    </tr>';
+                        echo    '</thead>';
+                        echo    '<tbody>';
+                        echo "<tr>";
+                        echo "<td style='text-transform: capitalize;'>$nome</td>";
+                        echo "<td style='text-transform: capitalize;'>$sobrenome</td>";
+                        echo "<td style='text-transform: capitalize;'>$maquina</td>";
+                        echo "<td style='text-transform: capitalize;'>$monitor1</td>";
+                        echo "<td style='text-transform: capitalize;'>$monitor2</td>";
+                        echo "<td style='text-transform: capitalize;'>$teclado</td>";
+                        echo "<td style='text-transform: capitalize;'>$mouse</td>";
+                        echo "<td style='text-transform: capitalize;'>$estabilizador</td>";
+                        echo "</tr>";   
+                        echo    '</tbody>';
+                        echo '</table>';
+                        echo '</form>';
+
+                       
+                        
                     }}else{
                         echo "0 Resultados";
                     }
@@ -49,7 +91,7 @@ include_once 'includes/navbar.php';
                 ?>
 
             </div>
-    </form>
+    
 </div>
 <br>
 </body>

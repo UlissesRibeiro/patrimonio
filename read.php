@@ -29,14 +29,14 @@
                 ."<td>
                 
                 <a class='btn' style='background-color:white;color:black;
-                border-color:blue;border-radius:0%; width:90%;'
-                href=form_editar_cadastro.php?id=$id><i class='bi bi-pen-fill'> Editar</i>
+                border-color:blue;border-radius:; width:55%;'
+                href=form_editar_cadastro.php?id=$id><i class='bi bi-pen-fill'> </i>
                 </a>
                 
                 <td>
                 <a class='btn' style='background-color:white;color:black;
-                border-color:red;border-radius:0%; width:90%;'
-                href=delete.php?id=$id><i class='bi bi-trash-fill'> Deletar</i>
+                border-color:red;border-radius:; width:55%;'
+                href=delete.php?id=$id><i class='bi bi-trash-fill'></i>
                 </a>
                 </td>";
                 
