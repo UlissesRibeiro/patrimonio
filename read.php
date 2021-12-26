@@ -34,7 +34,7 @@
                 </a>
                 
                 <td>
-                <a class='btn' style='background-color:white;color:black;
+                <a class='btn'  style='background-color:white;color:black;
                 border-color:red;border-radius:; width:55%;'
                 href=delete.php?id=$id><i class='bi bi-trash-fill'></i>
                 </a>
