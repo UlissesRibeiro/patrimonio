@@ -7,11 +7,11 @@ equipamentos vinculados aos respectivos patrimônios.</p>
 
 <!-- menu -->
 <p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#roadmap">Roadmap</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#licenc-a">Licença</a> • 
+ <a href="#objetivo">Objetivo</a>
+ <a href="#roadmap">Roadmap</a>
+ <a href="#tecnologias">Tecnologias</a> 
+ <a href="#contribuicao">Contribuição</a> 
+ <a href="#licenc-a">Licença</a>
  <a href="#autor">Autor</a>
 </p>
 
@@ -27,7 +27,7 @@ RH, Administralção e Infraestrutura T.I .</p>
 #tecnologias
 <p align="left">No projeto atualmente, está sendo utilizado :
 <ul>
-<li>HTM</li>
+<li>HTML</li>
 <li>CSS</li>
 <li>BootStrap</li>
 <li>PHP</li>
