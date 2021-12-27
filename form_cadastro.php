@@ -10,19 +10,11 @@ include_once 'includes/navbar.php';
                             <!--<img class="mb-4" src="img/cadastro.png" alt="" width="100" height="100">-->
                             <!--<h1 class="h3 mb-3 fw-normal" style="text-align: center;">Cadastro de Patrimônios</h1>-->
       
-<<<<<<< HEAD
-                            <div class="row d-flex justify-content-center">	
-                                <div class="col-lg-12 form-group">
-                                    <h3>Novo Cadastro</h3>
-                                    
-                                    <label>Nome
-=======
                             <div class="row d-flex ">	
                                 <div class="col-lg-12 form-group justify-content-center ">
                                     <h3><i><img src="img/edit.png" alt="Bootstrap" width="33" height="33" style="padding-bottom: 5px;"> Novo cadastro</i></h3>
                                     <h6 style="font-style: italic;">*Se não souber o patrimônio, estiver ilegivel ou não tiver inserir 0 (zero) apenas!</h6>
                                     <label><i><img src="img/id-card.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Nome</i>
->>>>>>> 60e8e4a21786b3c323f50fc401e2147775bce80c
                                     <input type="text" class="common-input mb-20 form-control" id="nome" name="nome" placeholder="nome"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome completo'"  required=""></label>
 
@@ -38,13 +30,8 @@ include_once 'includes/navbar.php';
                                     <input type="text" class="common-input mb-20 form-control" id="monitor1" name="monitor1" placeholder="monitor"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'monitor1'"  required=""></label>
 
-<<<<<<< HEAD
-                                    <label>Monitor 2
-                                    <input type="text" class="common-input mb-20 form-control" id="monitor2" name="monitor2" placeholder="se não tiver inserir 0"
-=======
                                     <label><i class="bi bi-display"> Monitor 2</i>
                                     <input type="text" class="common-input mb-20 form-control" id="monitor2" name="monitor2" placeholder="monitor"
->>>>>>> 60e8e4a21786b3c323f50fc401e2147775bce80c
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'monitor2'"  required=""></label>
 
                                     <label><i class="bi bi-keyboard" > Teclado</i>
