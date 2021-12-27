@@ -41,8 +41,12 @@ RH, Administralção e Infraestrutura T.I .</p>
 <h5 align="left">Features</h5>
 <p aligh="left">
 <ul >
-<li style="text-decoration:none">- [ x ] Cadastro de usuários e patrimonios</li>
-<li>- [ x ] Leitura dos dados cadastrados</li>
-<li>- [ x ] Edição e remoção de registros</li>
+<li>[ x ] Cadastro de usuários e patrimonios</li>
+<li>[ x ] Leitura dos dados cadastrados</li>
+<li>[ x ] Edição e remoção de registros</li>
+<li>[   ] Listar patrimonios no geral, dentro e fora da empresa</li>
+<li>[   ] Criar filtros na listagem</li>
+<!--<li>[   ]</li>
+<li>[   ]</li>-->
 </ul>
 </p>
