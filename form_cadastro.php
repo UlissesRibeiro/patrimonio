@@ -55,7 +55,7 @@
                             <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Cadastro de Patrimônios</h1>
       
                             <div class="row d-flex justify-content-center">	
-                                <div class="col-lg-6 form-group">
+                                <div class="col-lg-12 form-group">
                                     <h3>Novo Cadastro</h3>
                                     
                                     <label>Nome
@@ -76,11 +76,11 @@
 
                                     <label>Monitor 2
                                     <input type="text" class="common-input mb-20 form-control" id="monitor2" name="monitor2" placeholder="se não tiver inserir 0"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'monitor2'"  required=""></label><br>
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'monitor2'"  required=""></label>
 
                                     <label>Teclado
                                     <input type="text" class="common-input mb-20 form-control" id="teclado" name="teclado" placeholder="teclado"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'teclado'"  required=""></label>
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'teclado'"  required=""></label><br>
 
                                     <label>Mouse
                                     <input type="text" class="common-input mb-20 form-control" id="mouse" name="mouse" placeholder="mouse"
