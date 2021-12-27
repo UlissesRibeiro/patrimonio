@@ -36,3 +36,11 @@ RH, Administralção e Infraestrutura T.I .</p>
 <h4 align="center"> 
 	🚧   🚀 Em construção...  🚧
 </h4>
+
+<!-- features -->
+<h5 align="left">Features</h5>
+<p aligh="left">
+- [ x ] Cadastro de usuários e patrimonios
+- [ x ] Leitura dos dados cadastrados
+- [ x ] Edição e remoção de registros
+</p>
