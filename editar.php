@@ -1,4 +1,10 @@
 <?php
+
+include_once 'includes/navbar.php';
+
+?>
+
+<?php
 session_start();
 require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
 
@@ -23,15 +29,16 @@ if ($conn->connect_error) {
    WHERE id='$id'";
 
   if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+    echo '<div class="container d-flex justify-content-center" style="padding-top:100px;">';
+    echo "Cadastro atualizado com sucesso!";
   } else {
     echo "Error updating record: " . $conn->error;
   }
+  echo '<a class="btn btn-sm" style="border-color: darkgreen;" type="submit" href="lista_users.php">
+  <i class="bi bi-box-arrow-left"> Voltar</i></a>';
+  echo '</div>';
   
   $conn->close();
 
 ?>
 
-<html>
-  <a href="consulta_editar.php">voltar</a>
-</html>

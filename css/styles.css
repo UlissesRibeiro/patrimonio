@@ -2,6 +2,8 @@ h4{ color: white;
     text-align: left;
 }
 
+
+
 #nav{
     background-color: rgb(39, 149, 163);
     color: white;
@@ -25,7 +27,7 @@ h4{ color: white;
     color: white;
     border-color: white;
     /*background-color: rgb(0, 124, 195);*/
-    background-color: rgb(39, 149, 163);
+    background-color: rgb(39, 149, 163);*/
 }
 
 #form_cad{
@@ -36,5 +38,21 @@ h4{ color: white;
 #pag_login{
    padding-top: 250px;
    /*padding-left: 700px;*/
+}
+/* css responsivo provisorio */
+
+
+
+
+@media(max-width: 985px){
+
+    #lupiteco {
+        width: 25%;
+    }
+
+    #tabela th{
+        width: 10%;
+    }
+
 }
 
