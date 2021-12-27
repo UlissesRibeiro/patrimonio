@@ -19,13 +19,13 @@ equipamentos vinculados aos respectivos patrimônios.</p>
 <!-- objetivo -->
 
 #objetivo
-<p align="left">O projeto tem como objetivo, cadastrar funcionário, equipamentos, dentro da
+<p id="objetivo" align="left">O projeto tem como objetivo, cadastrar funcionário, equipamentos, dentro da
 empresa. Tendo assim um melhor controle, acessivel a todas as areas de interesse, como :
 RH, Administralção e Infraestrutura T.I .</p>
 
 <!-- sobre as tecnologias -->
 #tecnologias
-<p align="left">No projeto atualmente, está sendo utilizado :
+<p id="tecnologias"  align="left">No projeto atualmente, está sendo utilizado :
 <ul>
 <li>HTML</li>
 <li>CSS</li>
