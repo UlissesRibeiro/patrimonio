@@ -21,7 +21,7 @@
             <tbody>
                 <?php
                     //include_once 'read.php';
-                    $sql = "SELECT * from patrimonio"; 
+                    $sql = "SELECT * from desligados"; 
                     //where id ='$buscar'";
                     //todo o select vai ser em cima da ID da variaval $bucar
 

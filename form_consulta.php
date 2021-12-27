@@ -21,8 +21,8 @@ include_once 'includes/navbar.php';
             <div id="pesquisa" style="text-align: left;padding-top:100px;">
         
                 <?php
-                error_reporting(0);
-                ini_set("display_errors", 0 );
+                //error_reporting(0);
+                //ini_set("display_errors", 0 );
                 session_start();
                 //require_once("cfg" . DIRECTORY_SEPARATOR . "verifica_login.php");
                 require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");

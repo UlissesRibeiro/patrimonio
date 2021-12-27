@@ -36,7 +36,7 @@ include_once 'includes/navbar.php';
 
                                     <label><i class="bi bi-keyboard" > Teclado</i>
                                     <input type="text" class="common-input mb-20 form-control" id="teclado" name="teclado" placeholder="teclado"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'teclado'"  required=""></label>
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'teclado'"  required=""></label><br>
 
                                     <label><i class="bi bi-mouse2"> Mouse</i>
                                     <input type="text" class="common-input mb-20 form-control" id="mouse" name="mouse" placeholder="mouse"
