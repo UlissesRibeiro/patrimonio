@@ -17,10 +17,11 @@ require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
     $teclado=$_POST['teclado'];
     $mouse=$_POST['mouse'];
     $estabilizador=$_POST['estabilizador'];
+    $modeloDeTrabalho=$_POST['modelo'];
 
 
-    $sql = "INSERT INTO patrimonio(nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador)
-            VALUES('$nome','$sobrenome','$maquina','$monitor1','$monitor2','$teclado','$mouse','$estabilizador')";
+    $sql = "INSERT INTO patrimonio(nome,sobrenome,maquina,monitor1,monitor2,teclado,mouse,estabilizador,modelo)
+            VALUES('$nome','$sobrenome','$maquina','$monitor1','$monitor2','$teclado','$mouse','$estabilizador','$modeloDeTrabalho')";
 
     if ($conn->query($sql) === TRUE) {
         echo '<div class="container d-flex justify-content-center" style="padding-top:100px;">';

@@ -18,6 +18,7 @@ $monitor2=$_POST['monitor2'];
 $teclado=$_POST['teclado'];
 $mouse=$_POST['mouse'];
 $estabilizador=$_POST['estabilizador'];
+$modeloDeTrabalho=$_POST['modelo'];
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -25,7 +26,7 @@ if ($conn->connect_error) {
 
   $sql = "UPDATE patrimonio SET nome='$nome',
   sobrenome='$sobrenome', maquina='$maquina',monitor1='$monitor1',
-  monitor2='$monitor2',teclado='$teclado',mouse='$mouse',estabilizador='$estabilizador'
+  monitor2='$monitor2',teclado='$teclado',mouse='$mouse',estabilizador='$estabilizador',modelo='$modeloDeTrabalho'
    WHERE id='$id'";
 
   if ($conn->query($sql) === TRUE) {

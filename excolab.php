@@ -6,7 +6,7 @@
 
     $id=filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
 
-    $sql = $conn->query("SELECT * from patrimonio where id='$id'"); 
+    $sql = $conn->query("SELECT * from desligados where id='$id'"); 
     //$result = $conn->query($sql);
 
         //ciclo para exibição do select

@@ -15,13 +15,14 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Sobrenome</th>
                     <th scope="col">Editar</th>
-                    <!--<th scope="col">Deletar</th>-->
+                    <th scope="col">Deletar</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     //include_once 'read.php';
-                    $sql = "SELECT * from desligados  group by nome,sobrenome ";
+                    $sql = "SELECT * from patrimonio where modelo='presencial' group by nome,sobrenome ";
+                    //SELECT * from patrimonio where modelo='homeoffice' group by nome;
                     //where id ='$buscar'";
                     //todo o select vai ser em cima da ID da variaval $bucar
 
@@ -47,15 +48,15 @@
                                 
                                 <a class='btn' style='background-color:white;color:black;
                                 border-color:blue;border-radius:; width:55%;'
-                                href=excolab.php?id=$id><i class='bi bi-pen-fill'> </i>
+                                href=form_editar_cadastro.php?id=$id><i class='bi bi-pen-fill'> </i>
                                 </a>
                                 
-                                <!--<td>
+                                <td>
                                 <a class='btn'  style='background-color:white;color:black;
                                 border-color:red;border-radius:; width:55%;'
                                 href=delete.php?id=$id><i class='bi bi-trash-fill'></i>
                                 </a>
-                                </td>-->";
+                                </td>";
                                 
                         echo "</tr>";
                         }

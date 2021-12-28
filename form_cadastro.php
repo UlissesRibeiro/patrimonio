@@ -21,8 +21,12 @@ include_once 'includes/navbar.php';
                                     <label><i><img src="img/id-card.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Sobrenome</i>
                                     <input type="text" class="common-input mb-20 form-control" id="nome" name="sobrenome" placeholder="sobrenome"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome completo'"  required=""></label>
+
+                                    <label><i><img src="img/id-card.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Modelo de trabalho</i>
+                                    <input type="text" class="common-input mb-20 form-control" id="nome" name="modelo" placeholder="homeoffice,presencial"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome completo'"  required=""></label>
                                     
-                                    <label><i><img src="img/tower-pc.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Maquina</i>
+                                    <label><i><img src="img/tower-pc.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Maquinas</i>
                                     <input type="text" class="common-input mb-20 form-control" name="maquina" id="maquina" placeholder="maquina"
                                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'maquina'"  required="" ></label>
 
@@ -36,7 +40,7 @@ include_once 'includes/navbar.php';
 
                                     <label><i class="bi bi-keyboard" > Teclado</i>
                                     <input type="text" class="common-input mb-20 form-control" id="teclado" name="teclado" placeholder="teclado"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'teclado'"  required=""></label><br>
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'teclado'"  required=""></label>
 
                                     <label><i class="bi bi-mouse2"> Mouse</i>
                                     <input type="text" class="common-input mb-20 form-control" id="mouse" name="mouse" placeholder="mouse"

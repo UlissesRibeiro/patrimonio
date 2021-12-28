@@ -21,7 +21,8 @@
             <tbody>
                 <?php
                     //include_once 'read.php';
-                    $sql = "SELECT * from patrimonio"; 
+                    $sql = "SELECT * from patrimonio where modelo='hibrido' group by nome";
+                    //SELECT * from patrimonio where modelo='homeoffice' group by nome;
                     //where id ='$buscar'";
                     //todo o select vai ser em cima da ID da variaval $bucar
 

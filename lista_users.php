@@ -12,6 +12,8 @@ include_once 'includes/navbar.php';
     <p>
       <input type="radio" name="select" value="homeoffice"/> <i><img src="img/homeoffice.png" alt="Bootstrap" width="25"
       height="25" style="padding-bottom: 5px;"> Home Office</i>
+      <input type="radio" name="select" value="hibrido"/> <i><img src="img/homeoffice.png" alt="Bootstrap" width="25"
+      height="25" style="padding-bottom: 5px;"> Hibrido</i>
       <input type="radio" name="select" value="presencial"/> <i><img src="img/officer.png" alt="Bootstrap" width="25"
       height="25" style="padding-bottom: 5px;"> Presencial</i>
       <input type="radio" name="select" value="desligados"/> <i><img src="img/employee.png" alt="Bootstrap" width="25"
@@ -32,9 +34,14 @@ include_once 'includes/navbar.php';
     if ($answer == "homeoffice") { 
         session_start();
         //include_once 'includes/navbar.php';        
-      include_once 'consultas.php';      
+      include_once 'homeoffice.php';      
     }
-
+    elseif ($answer == "hibrido") {
+      include_once 'hibrido.php';
+  } 
+  elseif ($answer == "presencial") {
+    include_once 'presencial.php';
+} 
     elseif ($answer == "desligados") {
         include_once 'excolaboradores.php';
     } 
