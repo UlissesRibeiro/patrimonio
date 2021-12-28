@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(0);
+ini_set("display_errors", 0 );
 include_once 'includes/navbar.php';
 
 ?>
@@ -9,9 +10,12 @@ include_once 'includes/navbar.php';
   <form action="" method="post">
   <h5>Selecione abaixo!</h5>
     <p>
-      <input type="radio" name="select" value="homeoffice"/> Home Office
-      <input type="radio" name="select" value="presencial"/> Presencial
-      <input type="radio" name="select" value="desligados"/> Ex-colaboradores
+      <input type="radio" name="select" value="homeoffice"/> <i><img src="img/homeoffice.png" alt="Bootstrap" width="25"
+      height="25" style="padding-bottom: 5px;"> Home Office</i>
+      <input type="radio" name="select" value="presencial"/> <i><img src="img/officer.png" alt="Bootstrap" width="25"
+      height="25" style="padding-bottom: 5px;"> Presencial</i>
+      <input type="radio" name="select" value="desligados"/> <i><img src="img/employee.png" alt="Bootstrap" width="25"
+      height="25" style="padding-bottom: 5px;">Ex-colaboradores
       <!--<input type="radio" name="patrimonio" value="ex"/>Ex-colaboradores-->
     </p>
     <p>

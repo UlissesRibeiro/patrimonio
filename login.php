@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-require_once("cfg" . DIRECTORY_SEPARATOR . "conectar_cadastro.php");
+require_once("cfg" . DIRECTORY_SEPARATOR . "config.php");
+
  
 if(empty($_POST['nome']) || empty($_POST['senha'])) {
 	header('Location: index.php');

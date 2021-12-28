@@ -32,17 +32,7 @@
         //ini_set("display_errors", 0 );
         session_start();
         ?>
-        <!-- bloco que retorna erro de login -->
-        <?php
-            if(isset($_SESSION['nao_autenticado'])):
-            ?>
-            <div class="notification is-danger">
-                <p>ERRO: Usuário ou senha inválidos.</p>
-            </div>
-            <?php
-            endif;
-            unset($_SESSION['nao_autenticado']);
-        ?>
+
     <div class="container d-flex justify-content-center" id="pag_login">
         <div id="form_login" class="row"> 
 
@@ -51,6 +41,17 @@
                 <h4>Login</h4>
                 <label><i class="bi bi-person"> Usuário</i></label><br>
                 <input class="common-input mb-20 form-control w-50" type="text" id="usuario" name="nome" placeholder="usuario" ><br>
+                    <!-- bloco que retorna erro de login -->
+                    <?php
+                        if(isset($_SESSION['nao_autenticado'])):
+                        ?>
+                        <div class="notification is-danger">
+                            <p style="color:red;">Usuário ou senha inválidos.</p>
+                        </div>
+                        <?php
+                        endif;
+                        unset($_SESSION['nao_autenticado']);
+                    ?>
                 <label><i><img src="img/password.png" alt="Bootstrap" width="20" height="20" style="padding-bottom: 5px;"> Senha</i></label><br>
                 <input class="common-input mb-20 form-control w-50" type="password" id="senha" name="senha"  placeholder="senha" ><br>
 
