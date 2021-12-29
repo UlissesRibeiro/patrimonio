@@ -47,14 +47,14 @@
                                 ."<td>
                                 
                                 <a class='btn' style='background-color:white;color:black;
-                                border-color:blue;border-radius:; width:55%;'
-                                href=form_editar_cadastro.php?id=$id><i class='bi bi-pen-fill'> </i>
+                                border-color:;border-radius:; width:0%;'
+                                href=form_editar_cadastro.php?id=$id><i><img src='img/edit_form.png' alt='Bootstrap' width='25' height='30' style='padding-bottom: 5px;'> </i>
                                 </a>
                                 
                                 <td>
                                 <a class='btn'  style='background-color:white;color:black;
-                                border-color:red;border-radius:; width:55%;'
-                                href=delete.php?id=$id><i class='bi bi-trash-fill'></i>
+                                border-color:;border-radius:; width:0%;'
+                                href=delete.php?id=$id><i><img src='img/delete.png' alt='Bootstrap' width='30' height='30' style='padding-bottom: 5px;'> </i>
                                 </a>
                                 </td>";
                                 
