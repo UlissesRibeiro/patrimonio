@@ -14,7 +14,7 @@
                 <tr>
                     <th scope="col">Nome</th>
                     <th scope="col">Sobrenome</th>
-                    <th scope="col">Editar</th>
+                    <th scope="col"> </th>
                     <!--<th scope="col">Deletar</th>-->
                 </tr>
             </thead>
@@ -44,16 +44,16 @@
                         echo "<td style='text-transform: capitalize;'>$nome</td>
                                 <td style='text-transform: capitalize;'>$sobrenome</td>"." "
                                 ."<td>
-                                
-                                <a class='btn' style='background-color:white;color:black;
-                                border-color:blue;border-radius:; width:55%;'
-                                href=excolab.php?id=$id><i class='bi bi-pen-fill'> </i>
+
+                                <a class='btn btn-sm' style='background-color:white;color:black;
+                                border-color:;border-radius:; width:0%;'
+                                href=excolab.php?id=$id><i><img src='img/file.png' alt='Bootstrap' width='30' height='30' style='padding-bottom: 5px;'> </i>
                                 </a>
                                 
                                 <!--<td>
                                 <a class='btn'  style='background-color:white;color:black;
-                                border-color:red;border-radius:; width:55%;'
-                                href=delete.php?id=$id><i class='bi bi-trash-fill'></i>
+                                border-color:red;border-radius:; width:0%;'
+                                href=delete.php?id=$id><i><img src='img/delete.png' alt='Bootstrap' width='30' height='30' style='padding-bottom: 5px;'> </i>
                                 </a>
                                 </td>-->";
                                 

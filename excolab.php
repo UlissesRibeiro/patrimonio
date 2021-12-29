@@ -46,13 +46,13 @@ include_once 'includes/navbar.php';
 
 
           <br>
-          <!-- botão de confirmar o update para o editar.php -->
+          <!-- botão de confirmar o update para o editar.php --
           <input class="btn btn-sm" type="submit" onClick="return confirm('Deseja atualizar o registro?');"
 		      name="Submit" value="Salvar" id="button-form"
           style="background-color:darkgreen;border-color:black;color:white;">
-          <!-- botão para clenar as alterações antes de enviar -->
+          <!-- botão para clenar as alterações antes de enviar --
           <input class="btn btn-sm" type="reset" value="Limpar"
-          style="background-color:darkred;border-color:black;color:white;">
+          style="background-color:darkred;border-color:black;color:white;">-->
 
           <a class="btn btn-sm" type="reset" value="Voltar"
           style="background-color:RoyalBlue;border-color:darkgreen;color:white;" href="lista_users.php">

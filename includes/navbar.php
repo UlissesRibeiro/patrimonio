@@ -44,7 +44,7 @@ require_once("cfg" . DIRECTORY_SEPARATOR . "verifica_login.php");
                 <a class="nav-link" href="form_consulta.php"><i class="bi bi-search"> Consulta</i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="lista_users.php"><i class="bi bi-pencil-square"> Editar</i></a>
+                <a class="nav-link" aria-current="page" href="lista_users.php"><i class="bi bi-pencil-square"> Listar e editar</i></a>
               </li>
               <li>
               <a class="nav-link" aria-current="page" href="logout.php"><i class="bi bi-box-arrow-right"> Sair</i></a>
