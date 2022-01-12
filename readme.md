@@ -1,5 +1,5 @@
 <!-- nome do projeto -->
-<h1 align="center"> Sistema de Cadstros de Patrimônios </h1>
+<h1 align="center"> Sistema de Cadastros de Patrimônios </h1>
 
 <!-- descrição do projeto -->
 <p align="center"> Projeto com intuito de cadastrar funcionários, com seus
